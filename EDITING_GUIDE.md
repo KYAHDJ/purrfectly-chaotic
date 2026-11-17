@@ -215,7 +215,7 @@ Standalone messages **"daily"**, **"purr"**, **"chaos"** or **"go"** start the f
 2. Fetch fresh rednote clips if few are left.
 3. Pick the best clip, write the script, edit and render (sections 1-9).
 4. Show a dashboard: stats, today's video, to-do list, clips left.
-5. Prepare the YouTube upload (title, description, tags, thumbnail).
+5. Prepare the YouTube upload (title, description, tags, thumbnail) **and the Facebook Reel** (caption + hashtags, section 17). Both are scheduled for 8:00 AM Manila after the owner's yes.
 
 Then **stop and wait**: nothing is published without the owner's clear yes in chat for that video. The owner signs in to YouTube themselves in the browser pane; the password is never entered by Claude.
 Natural phrases also work: "create a new video" (steps 2-4), "status" (dashboard), "upload it" / "post it" (fill YouTube Studio, confirm once before publishing), "how are we doing" (stats and what is working). "go" only counts when it is the whole message.
@@ -269,3 +269,12 @@ Script: `data/yt/fb_reel.py <meta.json> [confirm]` (same saved login in `profile
 - Facebook runs its own copyright check on the video ("Your video is safe to publish! No copyright issues were found." for the zoomies video).
 - **US audience on Facebook**: there is no free country targeting for organic Reels. Use US English captions and the same US evening slot; true US-only targeting would be a paid ad (ask the owner first).
 - 2026-11-17: the zoomies Reel was scheduled for **Nov 18, 2026, 8:00 AM Manila** ("Reel scheduled").
+
+---
+
+## 18. Current state (2026-11-17)
+
+- First video (zoomies / bean-bag clip, 272.8K-like rednote clip, sports-commentary edit) is **scheduled on both YouTube and Facebook for Nov 18, 2026, 8:00 AM Manila** (7 PM US Eastern Nov 17). YouTube: private upload scheduled, title starts "Cat Shorts", 3 title hashtags, 32 tags, English (US), location United States, channel country United States. Facebook: Reel on the `mochineko` Page (the owner has not confirmed this is the intended Page name; they were told to say so if wrong).
+- Local raw clips and old renders are in the Recycle Bin; `clips/manifest.json` is empty; `data/used_clips.json` keeps used ids.
+- GitHub (`KYAHDJ/purrfectly-chaotic`, branch `main`) is always force pushed with the current files only.
+- Next steps: after the first video publishes, pull stats (views, subscribers) with the daily routine; make the next video with the hand workflow (sections 1-9) and pick a different effects kit.
