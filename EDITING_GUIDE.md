@@ -256,3 +256,16 @@ How the automation works / gotchas:
 - First upload done: the zoomies video, Private, "Checks complete. No issues found."
 - 2026-11-17: cleaned up 7 leftover drafts with `data/yt/drafts2.py delete` (selects only rows marked Draft, then More actions > Delete forever, and has a safety check that exactly 7 of 8 rows are drafts). Only do this with the owner's yes. Content now shows just the one Private zoomies video.
 - 2026-11-17: the zoomies video was **scheduled for Nov 18, 2026, 8:00 AM Manila** (7 PM Eastern Nov 17). Studio shows it as Scheduled.
+
+---
+
+## 17. Facebook Reels (Meta Business Suite)
+
+Script: `data/yt/fb_reel.py <meta.json> [confirm]` (same saved login in `profile/`; the owner signed in to Facebook once in that profile). Without `confirm` it fills everything and stops at the Share step; with `confirm` it presses the final Schedule button. Close every Chrome window using `profile/` first.
+
+- Page: `mochineko` (0 followers when connected). Business Suite URL: `https://business.facebook.com/latest/reels_composer` (needs about 20 s to load; wait before clicking).
+- Flow: "Add Video" (file chooser) > caption in the `contenteditable` box (`meta["fb_caption"]`, 3-4 hashtags; click an empty area, not Escape, to dismiss hashtag suggestions) > wait until the upload shows 100% > Next > Next > Share step > "Schedule" tab > date field (click the date box, pick the day in the calendar) > time field segments (click hour, type `08`; click minutes, type `00`; click AM/PM, type `A`) > press the bottom-right Schedule button. Facebook shows the time zone as `Asia/Shanghai`, which is the same UTC+8 as Manila.
+- Same rule as YouTube: **8:00 AM Manila** (7 PM US Eastern in winter), only after the owner's yes.
+- Facebook runs its own copyright check on the video ("Your video is safe to publish! No copyright issues were found." for the zoomies video).
+- **US audience on Facebook**: there is no free country targeting for organic Reels. Use US English captions and the same US evening slot; true US-only targeting would be a paid ad (ask the owner first).
+- 2026-11-17: the zoomies Reel was scheduled for **Nov 18, 2026, 8:00 AM Manila** ("Reel scheduled").
