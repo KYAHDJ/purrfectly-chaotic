@@ -252,3 +252,4 @@ How the automation works / gotchas:
 - Do not drive Chrome through `connect_over_cdp` on a manually started Chrome: it hung. Launching Playwright's persistent context with `channel="chrome"` (as `yt_lib.py` does) works.
 - Every failed run that gets past the file chooser leaves a **Draft** in Studio. Check Content and remove leftovers.
 - First upload done: the zoomies video, Private, "Checks complete. No issues found."
+- 2026-11-17: cleaned up 7 leftover drafts with `data/yt/drafts2.py delete` (selects only rows marked Draft, then More actions > Delete forever, and has a safety check that exactly 7 of 8 rows are drafts). Only do this with the owner's yes. Content now shows just the one Private zoomies video.
