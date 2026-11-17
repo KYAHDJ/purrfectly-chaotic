@@ -1,0 +1,58 @@
+[
+  {
+    "rank": 8,
+    "id": "690d6cb70000000004022177",
+    "label": "Crocodile bite",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 7,
+    "id": "6953f40700000000220301a1",
+    "label": "Tiny soldier",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 6,
+    "id": "6981ed0e000000002801d820",
+    "label": "Broom squad",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 5,
+    "id": "6a4fba3f00000000110066d0",
+    "label": "Spa day",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 4,
+    "id": "6a8ad886000000003703277a",
+    "label": "Pure panic",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 3,
+    "id": "696f62dc000000000a03064c",
+    "label": "Not hungry",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 2,
+    "id": "69f5ac90000000003502a1ab",
+    "label": "Curtain climber",
+    "start": 0,
+    "len": 3.6
+  },
+  {
+    "rank": 1,
+    "id": "68e905ea0000000007016d64",
+    "label": "Flying fail",
+    "start": 0,
+    "len": 4.5
+  }
+]

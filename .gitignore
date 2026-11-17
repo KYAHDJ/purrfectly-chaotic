@@ -1,0 +1,26 @@
+# environments / browser profiles (contain logins and cookies: never commit)
+.venv/
+profile/
+appwin/
+node_modules/
+__pycache__/
+*.pyc
+# big or private generated data
+clips/
+output/
+data/clipsheets/
+data/voicetest/
+data/voicetest2/
+data/raw/
+data/analysis/
+data/refs/
+data/engines*.txt
+data/reply_*.txt
+data/test_reply*.txt
+data/dummy_reply.txt
+data/last_prompt.txt
+# third-party sounds (Myinstants downloads): keep out of the repo, re-download with the sources listed in EDITING_GUIDE.md
+assets/memes/
+assets/swoosh_*.wav
+*.mp4
+*.mp3
