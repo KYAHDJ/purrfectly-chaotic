@@ -230,3 +230,25 @@ Dashboard (decided): an inline page in the chat. Headline numbers are **views an
 - Transition spacing fix: transitions are skipped within 0.5 s of a punch/flash/damage/freeze event (they fought each other); text events no longer block transitions because text is drawn last.
 - 2026-11-17: the owner noticed the zoomies video had no ending. Rule: **every video ends with a call to action unless the punchline is deliberately the ending**, and the CTA should vary (`meow`, `rate`, `both`, or custom `cta_text`). Added the `both` (subscribe + comment) mode.
 - 2026-11-17: GitHub repo is https://github.com/KYAHDJ/purrfectly-chaotic . The owner wants every save to be a **force push of the current files only, no old files** (`git push --force`). The repo ignores clips/output/profile (see `.gitignore`).
+
+---
+
+## 16. YouTube upload (Studio automation, saved login)
+
+Scripts in `data/yt/`: `yt_lib.py` (opens Studio with the saved login in `profile/` via Playwright + installed Chrome), `upload.py <meta.json>` (uploads a video **as Private, never publishes**), `set_country.py`, `list_content.py`. **Close every Chrome window that uses `profile/` before running them.** Meta file example: `data/yt/zoomies_meta.json` (`video`, `title`, `description`, `tags`).
+
+Owner's upload rules (2026-11-17):
+- **Title**: starts with "Cat Shorts", short hook, emoji, **max 3 hashtags in the title** (e.g. `Cat Shorts: 3 PM Zoomies, 4 Laps of Chaos <emoji> #cat #zoomies #funnycats`).
+- **Description**: written by Claude: one funny line about the video, the subscribe/comment ask, 3 hashtags at the end.
+- **Tags**: use the maximum YouTube allows, all related to the video. YouTube counts a multi-word tag as length + 2 (quotes) plus commas, so keep `sum(len+2 if it has a space) + commas <= 500` (aim for about 470; 448 plain characters of tags was rejected as over the limit).
+- **US-based**: channel country of residence set to **United States** (Settings > Channel > Basic info), channel keywords added, and on every video: **Video language = English (United States)** and **Video location = United States** (pick the first plain "United States" suggestion, not a place). Audience = "No, it's not made for kids". Do not tick TV/other restrictions.
+- **Visibility**: always upload **Private** first. Never publish without the owner's yes. **Publishing time rule**: always schedule for when the US is awake in the evening (the owner suggested around 10 PM; proposed default 7 PM US Eastern so the West Coast gets 4 PM; confirm with the owner before the first scheduled publish).
+
+How the automation works / gotchas:
+- Dashboard "Upload videos" button, then `expect_file_chooser` on "Select files" to attach the mp4. Title/description boxes are `#title-textarea #textbox` / `#description-textarea #textbox`; type with the keyboard (hashtag suggestions pop up: click an empty area to dismiss, never press Escape, it closes the dialog).
+- Tags must be **typed** (`keyboard.type` with commas), not `fill()`, or they do not become chips.
+- Language dropdown is a long list: `tp-yt-paper-item:has-text('English (United States)')`, scroll into view and `click(force=True)`.
+- "Next" is `#next-button`; wait until the footer no longer says "Uploading" before clicking it; at Visibility click the "Private" radio, then "Save".
+- Do not drive Chrome through `connect_over_cdp` on a manually started Chrome: it hung. Launching Playwright's persistent context with `channel="chrome"` (as `yt_lib.py` does) works.
+- Every failed run that gets past the file chooser leaves a **Draft** in Studio. Check Content and remove leftovers.
+- First upload done: the zoomies video, Private, "Checks complete. No issues found."
