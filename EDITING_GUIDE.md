@@ -85,6 +85,7 @@ Verified by frame/ASR analysis of `Downloads\Catcompilationsinpast` (11 MP4s):
 - Ending is picked by env var `CTA`: `meow`, `rate`, or `none` (default is a seeded random pick from the clip id).
   - `meow`: "Hit subscribe and click the like button to watch it turn into a meow emoji." + subscribe pills + cursor click + meow sfx, over the last 2 s of the clip played forward/back.
   - `rate`: "Rate this absolute genius from one to ten in the comments."
+  - `both`: subscribe + comment: "Hit subscribe for more chaos, and tell me in the comments what this cat should do next." Subscribe pills + cursor click, no meow sound. A plan can override the wording per clip with `cta_text` (e.g. "...tell me in the comments how many laps you would last.").
   - `none`: ends on the punchline, with a 0.8 s tail so the last word is never clipped.
 
 ### Event types
@@ -98,6 +99,7 @@ Verified by frame/ASR analysis of `Downloads\Catcompilationsinpast` (11 MP4s):
 | `freeze` | B&W high-contrast freeze frame for `dur` s + record scratch. | The big comedic hit. |
 | `damage` | Short camera shake + red vignette edges + red/blue colour split (about 0.4 s). | **Only** when something gets hurt (a slap, bite, fall, scream). |
 | `text` | One meme text (Impact, bounces in), `pos`, `size`, `rot`, `fill`. Drawn last so punch-ins never cover it. | At most one per video. |
+| `text` + `until` | Any event can take `until` (clip time): its duration becomes the output time until that moment. Used for a small sports-style tag (e.g. `LAP 1`..`LAP 4`, size 64, top-left) that stays on for each lap: a consistent broadcast-style device instead of random meme words. | When the clip has a repeating structure. |
 | `sfx` | Plays a sound: `name` (`vineboom`, `bruh`, `airhorn`, `violin`, `scratch`, `badumtss`, `waitwhat`, `bonk`, `womp`, `crickets`, `laugh`, `gasp`, `ding`, `sheesh`, or a base sfx), `g` = gain. | Match the moment. Avoid stacking sounds on the final line. |
 | `shake` | Only plays the hit sound (screen shake was removed: viewers got dizzy). | Rare. |
 | `flash` | White flash (also keep rare; owner dislikes fade/flash looks). | Avoid. |
@@ -195,3 +197,36 @@ Each was trimmed to the useful 0.3-1.5 s (swishes: 0.38 s centred on their loude
 - Better voice (ElevenLabs-class) is still wanted; Edge Andrew is the best available free option so far.
 - Clip search for more fresh clips (7 fresh clips already downloaded and unedited).
 - 3D card-flip / picture-in-picture intro idea from the old videos (not built).
+
+---
+
+## 13. Keeping this guide current
+
+This file is the saved record of everything learned. Update it **every time** something new is learned or applied (a new effect, a rule from the owner, a fix, a sound source, a workflow change). Commit and push only when the owner asks.
+
+---
+
+## 14. Trigger words and the daily routine
+
+Standalone messages **"daily"**, **"purr"**, **"chaos"** or **"go"** start the full routine:
+1. Check channel stats and compare to last time.
+2. Fetch fresh rednote clips if few are left.
+3. Pick the best clip, write the script, edit and render (sections 1-9).
+4. Show a dashboard: stats, today's video, to-do list, clips left.
+5. Prepare the YouTube upload (title, description, tags, thumbnail).
+
+Then **stop and wait**: nothing is published without the owner's clear yes in chat for that video. The owner signs in to YouTube themselves in the browser pane; the password is never entered by Claude.
+Natural phrases also work: "create a new video" (steps 2-4), "status" (dashboard), "upload it" / "post it" (fill YouTube Studio, confirm once before publishing), "how are we doing" (stats and what is working). "go" only counts when it is the whole message.
+Dashboard (decided): an inline page in the chat. Headline numbers are **views and subscribers** (from `data/stats_log.csv`, written by `stats.py`), plus videos ready to review, fresh clips left and a to-do list. Be honest when the data is stale or has a single point (no made-up trends).
+
+
+---
+
+## 15. Log of what was applied (newest last)
+
+- 2026-11-17: moved all raw clips and edited videos to the Recycle Bin (kept code, guide, sounds, shaders, the 11 old reference videos) and reset `clips/manifest.json`. Videos made so far are NOT kept; rebuild from `plan_e.json` ideas in this guide if needed.
+- 2026-11-17: picked the clip by **likes** from rednote (query `搞笑猫咪`, top was 272.8K likes). Rules for picking a viral clip: no burned-in text (skip clips with Chinese/English subtitles), real cats (skip AI-generated cartoon videos), never an already-famous YouTube video (copyright risk, and the channel rule is no YouTube downloads), 10-25 s long.
+- 2026-11-17: zoomies/bean-bag clip edited as a sports commentary with a lap counter, a bonk on the first crash, an airhorn on the last lap, one punch-in on the first flop. No damage hit, no magnifier, no freeze: its own kit.
+- Transition spacing fix: transitions are skipped within 0.5 s of a punch/flash/damage/freeze event (they fought each other); text events no longer block transitions because text is drawn last.
+- 2026-11-17: the owner noticed the zoomies video had no ending. Rule: **every video ends with a call to action unless the punchline is deliberately the ending**, and the CTA should vary (`meow`, `rate`, `both`, or custom `cta_text`). Added the `both` (subscribe + comment) mode.
+- 2026-11-17: GitHub repo is https://github.com/KYAHDJ/purrfectly-chaotic . The owner wants every save to be a **force push of the current files only, no old files** (`git push --force`). The repo ignores clips/output/profile (see `.gitignore`).

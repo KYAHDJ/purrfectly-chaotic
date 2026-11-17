@@ -19,8 +19,9 @@ VPITCH = float(os.environ.get("VPITCH", "1.0"))  # no pitch shift: it made the v
 import random
 CTA_MEOW = "Hit subscribe and click the like button to watch it turn into a meow emoji."
 CTA_RATE = "Rate this absolute genius from one to ten in the comments."
+CTA_BOTH = "Hit subscribe for more chaos, and tell me in the comments what this cat should do next."
 CTA_MODE = os.environ.get("CTA") or random.Random(plan_id := json.loads((ROOT / "plan_e.json").read_text(encoding="utf-8"))["id"]).choice(["none", "none", "none", "rate", "meow"])
-CTA = {"meow": CTA_MEOW, "rate": CTA_RATE, "none": None}[CTA_MODE]
+CTA = {"meow": CTA_MEOW, "rate": CTA_RATE, "both": (json.loads((ROOT / "plan_e.json").read_text(encoding="utf-8")).get("cta_text") or CTA_BOTH), "none": None}[CTA_MODE]
 print("ending:", CTA_MODE, flush=True)
 STOP = set("this that with have they their there what when then than from into just like your about would could really every very over only even some more most been being were also while these those and the but for are was his her its him she you can not".split())
 CYAN, YELLOW, GREEN = "FFFF00", "00E6FF", "40FF40"  # ASS BGR
@@ -109,6 +110,8 @@ for E in events:
     if E["type"] == "burst": E = {**E, "type": "shake"}
     to = to_out(E["t"])
     if to is None or to > dv - 0.5: continue
+    if E.get("until") is not None:
+        _u = to_out(E["until"]); E = {**E, "dur": round((_u if _u is not None else dv) - to, 2)}
     ev.append({**E, "to": round(to, 2)})
 print("effects:", [(e["type"], e["to"]) for e in ev], flush=True)
 for i, (os_, a, win, v) in enumerate(segs): print(f"  line {i}: clip {a:.1f}-{a+win:.1f}s at {v:.2f}x  -> out {os_:.1f}s", flush=True)
@@ -225,7 +228,7 @@ def sub_img(path, done):
     k = 1.8; c = c.resize((int(cw * k), int(chh * k)), Image.LANCZOS)
     im = Image.new("RGBA", (W, H), (0, 0, 0, 0)); im.paste(c, ((W - c.width) // 2, 700 - int(cy * k)), c); im.save(path)
 sub_img(TMP / "sub0.png", False); sub_img(TMP / "sub1.png", True)
-sub_t = next((w_[1] for w_ in words if clean(w_[0]) == "subscribe" and w_[1] > dv * 0.6), cta_start + 0.2) if CTA_MODE == "meow" else None
+sub_t = next((w_[1] for w_ in words if clean(w_[0]) == "subscribe" and w_[1] > dv * 0.6), cta_start + 0.2) if CTA_MODE in ("meow", "both") else None
 
 # ---------- 6. sfx ----------
 SR = 44100
@@ -240,7 +243,7 @@ put("drop", 0.1, 0.5)
 TRD = 0.2; TR_TYPES = plan.get("trs") or ["WhipPan", "ZoomInOut", "TangentMotionBlur", "WhipSpin", "StretchSlide", "LensPush", "DirectionalWarp"]; SW = plan.get("sw") or [11, 12, 10, 6, 1, 5, 7, 4]; TR_D = {"WhipPan": 0.2, "ZoomInOut": 0.22, "TangentMotionBlur": 0.2, "WhipSpin": 0.22, "StretchSlide": 0.2, "LensPush": 0.2, "DirectionalWarp": 0.2}
 trs = []; _tp = -9.0
 for (os_, a, win, v) in segs:
-    if os_ - _tp >= 3.0 and os_ < dv - 1.0 and not any(abs(os_ - e_["to"]) < 0.5 and e_["type"] in ("flash", "text") for e_ in ev):
+    if os_ - _tp >= 3.0 and os_ < dv - 1.0 and not any(abs(os_ - e_["to"]) < 0.5 and e_["type"] in ("flash", "punch", "damage", "freeze") for e_ in ev):
         trs.append((round(os_, 2), TR_TYPES[len(trs) % len(TR_TYPES)])); _tp = os_
 for i_, (t0_, ty_) in enumerate(trs): put(f"swish_{SW[i_ % len(SW)]}", max(t0_ - 0.12, 0), 0.8)
 print("transitions:", trs, flush=True)
