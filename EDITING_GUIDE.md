@@ -41,6 +41,7 @@ Rules of the owner's working style: short casual replies, simple words, no lectu
 | `asr_util.py` | faster-whisper word timestamps (audio decoded via ffmpeg). |
 | `server.py`, `dashboard.html`, `run.py`, `make_run.py` | Dashboard, daily Run (stats/research/report) and Make Video. `server.py` `latest_video()` globs `commentary_*.mp4`. |
 | `plan_commentary.py`, `make_commentary.py`, `plan_c.json` | Older single-template pipeline. Not wired in. |
+| `data/yt/*.py` | YouTube Studio automation with the saved login: `upload.py` (private upload with title/description/tags/US settings), `sched2.py` (schedule 8 AM Manila), `set_country.py`, `list_content.py`, `drafts2.py` (draft cleanup). See section 16. |
 | `data/refs/old/` | Analysis of the owner's 11 old successful videos (word timings, audio, end frames). |
 
 Python: the project venv `.venv\Scripts\python.exe`. Needs ffmpeg/ffprobe on PATH. Extra packages used: `edge-tts`, `moderngl`, `faster-whisper`, `numpy`, `Pillow`, `playwright`.
@@ -192,10 +193,11 @@ Each was trimmed to the useful 0.3-1.5 s (swishes: 0.38 s centred on their loude
 
 ## 12. Open items / ideas
 
-- Build the not-yet-built tools: instant replay with "REPLAY" tag, rewind, hand-drawn circle/arrow, small stickers, cinema bars.
-- Make Video button still uses the old auto planner; either port the hand workflow into it or keep the workflow in chat.
-- Better voice (ElevenLabs-class) is still wanted; Edge Andrew is the best available free option so far.
-- Clip search for more fresh clips (7 fresh clips already downloaded and unedited).
+- Build the not-yet-built tools: instant replay with a "REPLAY" tag, rewind, hand-drawn circle/arrow, small stickers, cinema bars.
+- Make Video button still uses the old auto planner; either port the hand workflow into it or keep the workflow in chat (current choice: chat).
+- Better voice (ElevenLabs-class) is still wanted; Edge Andrew (+40%) is the best free option so far.
+- Raw clips and old renders were moved to the Recycle Bin on 2026-11-17; fetch fresh clips with `rednote_fetch.py` when making the next video.
+- After the first scheduled video publishes, pull the first stats (views and subscribers) and decide the next topic from what works.
 - 3D card-flip / picture-in-picture intro idea from the old videos (not built).
 
 ---
