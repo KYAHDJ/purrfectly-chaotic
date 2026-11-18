@@ -1,139 +1,102 @@
 {
- "id": "6a1a92d50000000006031cb5",
- "file": "rn_6a1a92d50000000006031cb5.mp4",
- "dur": 16.43,
+ "id": "6add7f04000000002b00c705",
+ "file": "rn_6add7f04000000002b00c705.mp4",
+ "dur": 26.17,
  "w": 720,
  "h": 1280,
- "angle": "zoomie laps, sports commentary",
+ "angle": "held upright, dead stare, slow dance he never agreed to",
  "rhythm": false,
  "peaks": [],
  "cen": [],
  "lines": [
   {
-   "say": "It is 3 PM and this cat has decided it's 3 AM.",
-   "at": 0.2,
+   "say": "Human picked him up mid nap. No warning. No consent.",
+   "at": 4.3,
    "pause": 0
   },
   {
-   "say": "Step one, launch off the tiger mat like it's a runway.",
-   "at": 1.2,
+   "say": "Now he's holding hands. In a slow dance he never signed up for.",
+   "at": 7.2,
    "pause": 0
   },
   {
-   "say": "Step two, crash into the bean bag and call it landing.",
-   "at": 2.7,
+   "say": "Look at that face. He's going to remember this at 3 AM.",
+   "at": 11.0,
    "pause": 0
   },
   {
-   "say": "Lap two. Same route. Same confidence.",
-   "at": 4.2,
+   "say": "Twenty seconds. Zero blinks. Pure disappointment.",
+   "at": 16.0,
    "pause": 0
   },
   {
-   "say": "Zero lessons learned, absolutely zero.",
-   "at": 6.2,
-   "pause": 0
-  },
-  {
-   "say": "Lap three, and now he's showing off.",
-   "at": 8.2,
-   "pause": 0
-  },
-  {
-   "say": "Lap four. The bean bag has filed a complaint.",
-   "at": 12.2,
+   "say": "Then he blinked once. That was the cry for help.",
+   "at": 21.6,
    "pause": 0
   }
  ],
  "events": [
   {
-   "type": "punch",
-   "t": 2.7,
+   "type": "sfx",
+   "name": "waitwhat",
+   "t": 4.4,
+   "g": 0.5
+  },
+  {
+   "type": "circle",
+   "t": 9.0,
    "focus": [
-    0.55,
+    0.2,
     0.3
    ],
-   "zoom": 1.4,
-   "dur": 0.9
+   "inplace": true,
+   "src": 170,
+   "d": 270,
+   "dur": 2.0,
+   "exact": true
+  },
+  {
+   "type": "push",
+   "t": 11.2,
+   "focus": [
+    0.5,
+    0.33
+   ],
+   "zoom": 1.3
   },
   {
    "type": "sfx",
-   "name": "bonk",
-   "t": 1.3,
-   "g": 0.6
+   "name": "crickets",
+   "t": 17.0,
+   "g": 0.4
   },
   {
-   "type": "sfx",
-   "name": "airhorn",
-   "t": 12.2,
-   "g": 0.45
-  },
-  {
-   "type": "text",
-   "t": 0.3,
-   "until": 4.1,
-   "text": "LAP 1",
-   "size": 64,
-   "pos": [
-    50,
-    150
-   ]
-  },
-  {
-   "type": "text",
-   "t": 4.3,
-   "until": 8.1,
-   "text": "LAP 2",
-   "size": 64,
-   "pos": [
-    50,
-    150
-   ]
-  },
-  {
-   "type": "text",
-   "t": 8.3,
-   "until": 12.1,
-   "text": "LAP 3",
-   "size": 64,
-   "pos": [
-    50,
-    150
-   ]
-  },
-  {
-   "type": "text",
-   "t": 12.3,
-   "until": 16.3,
-   "text": "LAP 4",
-   "size": 64,
-   "pos": [
-    50,
-    150
-   ]
+   "type": "freeze",
+   "t": 23.3,
+   "dur": 0.7
   }
  ],
  "trs": [
-  "TangentMotionBlur",
-  "WhipPan",
-  "DirectionalWarp",
+  "StretchSlide",
+  "LensPush",
+  "WhipSpin",
   "ZoomInOut"
  ],
  "sw": [
-  12,
-  10,
-  6,
-  1,
-  5,
   7,
   4,
-  11
+  11,
+  1,
+  12,
+  5,
+  10,
+  6
  ],
  "acc": [
-  "FFFF00",
-  "00FF7F",
-  "7B3FFF"
+  "FF9900",
+  "00FFFF",
+  "FFFF00"
  ],
- "music": 0.18,
- "cta_text": "Hit subscribe for more zoomies, and tell me in the comments how many laps you would last."
+ "music": 0.16,
+ "cta_text": "Hit subscribe for more, and tell me in the comments what he is plotting."
 }

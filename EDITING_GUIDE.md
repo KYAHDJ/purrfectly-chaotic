@@ -278,3 +278,28 @@ Script: `data/yt/fb_reel.py <meta.json> [confirm]` (same saved login in `profile
 - Local raw clips and old renders are in the Recycle Bin; `clips/manifest.json` is empty; `data/used_clips.json` keeps used ids.
 - GitHub (`KYAHDJ/purrfectly-chaotic`, branch `main`) is always force pushed with the current files only.
 - Next steps: after the first video publishes, pull stats (views, subscribers) with the daily routine; make the next video with the hand workflow (sections 1-9) and pick a different effects kit.
+
+---
+
+## 19. Video 2 (standing cat) and first stats, 2026-11-18
+
+- **First video results (4.5 h after 8 AM Manila):** YouTube 437 views, 34 subs; Facebook Reel 252 views, 59 three-second views, avg play about 3 s, no reactions. Lesson: viewers leave early, so open with the funniest line or visual in the first second. Stats scripts: `stats.py` (YouTube) and `data/yt/fb_stats.py` (Meta Content tab).
+- **Video 2:** clip `6add7f04...` (cat held upright by his paws, dead stare). Kit: circle on the held paw, slow push on the face, freeze on the wink with scratch, sfx waitwhat and crickets, `both` CTA. Transitions StretchSlide, LensPush, WhipSpin, ZoomInOut; accents orange/cyan/yellow. Output `output/standing_cat.mp4`, metadata `data/yt/standing_meta.json`. Waiting for the owner's yes before upload.
+- **Gotchas:** run the renderer with `.venv/Scripts/python.exe` (system python has no `moderngl`); set `PYTHONIOENCODING=utf-8` when printing emoji; ffmpeg `drawtext` crashes here (no fontconfig), so use tile grids without text.
+- Skipped clips: `6a4e1b82` (AI-generated cats in litter boxes) and `6a4e6daf` (parkour cat, has a burned-in Chinese label at caption height).
+
+---
+
+## 20. Learning loop (data from every video)
+
+After each video, record its numbers in `data/video_log.csv` (one row per video) and write what it taught us here. Pull data with `.venv/Scripts/python.exe data/yt/yt_video_stats.py` (YouTube: views, viewed vs swiped away, how viewers found it) and `data/yt/fb_stats.py` (Facebook). Check at about 4 h and again at 24 h and 72 h, since Shorts keep growing. The next video's hook, length and kit must use the last rows.
+
+**Video 1 (zoomies), 4.5 h in:** 583 YouTube views (127 of the last hour from the Shorts feed, 4 from search), 24.6% stayed to watch and 75.4% swiped away, 3 likes, 0 comments, 0 subscribers, about 4.3 s average view on a 19 s Short. Facebook: 252 views, 59 three-second views (23%), about 3 s average play.
+- Both platforms agree: about 3 in 4 people leave in the first seconds. Fix the hook before anything else.
+- Zero subscribers and comments: the ending CTA is only reached by a few. Put a light CTA or a question earlier, and keep the end short.
+- Hook rule from now on: the funniest or most striking frame and a punchy first line inside the first 1 s (cold open), then the story.
+- "Viewed vs swiped away" is the number to beat: target 40%+ stayed.
+
+**Video 2 redone with the hook rule (2026-11-18):** cut the 4 s nap, so it opens on the pickup (cat's face and paws in motion in frame 1, hook line "Human picked him up mid nap. No warning. No consent."). Now 14.8 s. Compare its stayed-to-watch % with video 1 (24.6%) when it has data.
+
+**Video 2 scheduled (2026-11-18):** YouTube Short "Cat Shorts: Forced Slow Dance, Zero Blinks" and the mochineko Facebook Reel, both Nov 19, 2026, 8:00 AM Manila. `fb_reel.py` now takes the day as a third argument (default 19): `fb_reel.py <meta.json> confirm <day>`. Check its numbers at about 4 h, 24 h and 72 h and fill `data/video_log.csv`.
