@@ -303,3 +303,13 @@ After each video, record its numbers in `data/video_log.csv` (one row per video)
 **Video 2 redone with the hook rule (2026-11-18):** cut the 4 s nap, so it opens on the pickup (cat's face and paws in motion in frame 1, hook line "Human picked him up mid nap. No warning. No consent."). Now 14.8 s. Compare its stayed-to-watch % with video 1 (24.6%) when it has data.
 
 **Video 2 scheduled (2026-11-18):** YouTube Short "Cat Shorts: Forced Slow Dance, Zero Blinks" and the mochineko Facebook Reel, both Nov 19, 2026, 8:00 AM Manila. `fb_reel.py` now takes the day as a third argument (default 19): `fb_reel.py <meta.json> confirm <day>`. Check its numbers at about 4 h, 24 h and 72 h and fill `data/video_log.csv`.
+
+**Day 2 check (2026-11-19, 22:20 Manila):** channel 35 subs, 1.6K views in 28 d, 2.3 h watch time.
+- Video 1 (zoomies, 48 h): 1,083 YT views (1.0K from the Shorts feed, 18 from search), 28.4% stayed, 4 likes, +1 subscriber. Facebook 259 views, 61 three-second views.
+- Video 2 (standing cat, 14 h): 576 YT views, 22.5% stayed (worse than video 1 even with the cold open), 12 likes (3x video 1), 0 subs. Facebook 80 three-second views, avg play 4 s.
+- **Audience:** video 1's views are 36% Philippines and only 14% United States. The 8 AM Manila slot reaches the Shorts feed in the Philippines, so the US-prime-time plan is not translating into US viewers yet. Worth testing a different slot or accepting the PH audience.
+- Lessons: a calm clip with a slow hold loses people even with a cold open; people like it more but do not stay for it. Pick clips with big, readable motion in the first second.
+
+**Video 3 (croc dentist cat, 2026-11-19):** clip `689db55f`, 13.4 s. Hook per the day-2 lessons: motion in frame 1, short runtime, a clear setup and snap. Kit: slow push on the paw, damage on the snap (something really gets hurt), violin then vineboom. Transitions DirectionalWarp, TangentMotionBlur; accents green/amber. Output `output/croc_cat.mp4`, metadata `data/yt/croc_meta.json`. Waiting for the owner's yes.
+
+**Video 3 scheduled (2026-11-19):** YouTube Short "Cat Shorts: Cat vs Crocodile Dentist, He Lost" and the mochineko Reel, both Nov 20, 2026, 8:00 AM Manila (verified on screen). Gotcha: `fb_reel.py <meta> confirm <day>` needs the day as the third argument (default 19), otherwise Facebook rejects the past time; always check `data/clipsheets/fb_d5.png` shows the right date. Check its numbers at about 4 h, 24 h, 72 h.

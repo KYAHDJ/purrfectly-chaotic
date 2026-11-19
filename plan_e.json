@@ -1,102 +1,90 @@
 {
- "id": "6add7f04000000002b00c705",
- "file": "rn_6add7f04000000002b00c705.mp4",
- "dur": 26.17,
+ "id": "689db55f000000001d02849d",
+ "file": "rn_689db55f000000001d02849d.mp4",
+ "dur": 10.06,
  "w": 720,
  "h": 1280,
- "angle": "held upright, dead stare, slow dance he never agreed to",
+ "angle": "cat vs crocodile dentist, overconfidence then snap",
  "rhythm": false,
  "peaks": [],
  "cen": [],
  "lines": [
   {
-   "say": "Human picked him up mid nap. No warning. No consent.",
-   "at": 4.3,
+   "say": "Cat versus crocodile dentist. Bro is feeling confident.",
+   "at": 0.2,
    "pause": 0
   },
   {
-   "say": "Now he's holding hands. In a slow dance he never signed up for.",
-   "at": 7.2,
+   "say": "Pokes one tooth. Fine. Pokes another. Still fine.",
+   "at": 2.0,
    "pause": 0
   },
   {
-   "say": "Look at that face. He's going to remember this at 3 AM.",
-   "at": 11.0,
+   "say": "Zero fear. This is a man who has never lost.",
+   "at": 5.0,
    "pause": 0
   },
   {
-   "say": "Twenty seconds. Zero blinks. Pure disappointment.",
-   "at": 16.0,
+   "say": "Snap.",
+   "at": 7.1,
    "pause": 0
   },
   {
-   "say": "Then he blinked once. That was the cry for help.",
-   "at": 21.6,
+   "say": "He is filing a complaint with the entire neighborhood.",
+   "at": 7.9,
    "pause": 0
   }
  ],
  "events": [
   {
-   "type": "sfx",
-   "name": "waitwhat",
-   "t": 4.4,
-   "g": 0.5
-  },
-  {
-   "type": "circle",
-   "t": 9.0,
-   "focus": [
-    0.2,
-    0.3
-   ],
-   "inplace": true,
-   "src": 170,
-   "d": 270,
-   "dur": 2.0,
-   "exact": true
-  },
-  {
    "type": "push",
-   "t": 11.2,
+   "t": 2.0,
    "focus": [
-    0.5,
-    0.33
+    0.45,
+    0.58
    ],
-   "zoom": 1.3
+   "zoom": 1.25
   },
   {
    "type": "sfx",
-   "name": "crickets",
-   "t": 17.0,
+   "name": "violin",
+   "t": 5.0,
    "g": 0.4
   },
   {
-   "type": "freeze",
-   "t": 23.3,
-   "dur": 0.7
+   "type": "damage",
+   "t": 7.15,
+   "dur": 0.45
+  },
+  {
+   "type": "sfx",
+   "name": "vineboom",
+   "t": 7.15,
+   "g": 0.6
   }
  ],
  "trs": [
-  "StretchSlide",
-  "LensPush",
-  "WhipSpin",
-  "ZoomInOut"
+  "DirectionalWarp",
+  "TangentMotionBlur",
+  "WhipPan",
+  "LensPush"
  ],
  "sw": [
-  7,
-  4,
-  11,
-  1,
-  12,
-  5,
   10,
-  6
+  6,
+  11,
+  12,
+  1,
+  5,
+  7,
+  4
  ],
  "acc": [
-  "FF9900",
-  "00FFFF",
-  "FFFF00"
+  "00FF00",
+  "00D7FF",
+  "FFFFFF"
  ],
- "music": 0.16,
- "cta_text": "Hit subscribe for more, and tell me in the comments what he is plotting."
+ "grade": "warm",
+ "music": 0.14,
+ "cta_text": "Hit subscribe for more, and tell me in the comments which toy this cat should fight next."
 }
