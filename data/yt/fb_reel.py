@@ -32,7 +32,10 @@ with sync_playwright() as p:
         pg.mouse.click(525, 302); pg.wait_for_timeout(300); pg.keyboard.type("00"); pg.wait_for_timeout(300)
         pg.mouse.click(548, 302); pg.wait_for_timeout(300); pg.keyboard.type("A"); pg.wait_for_timeout(800)
         shot(pg, "d5")
-        if CONFIRM:
+        _t = pg.inner_text("body") + " " + " ".join(pg.evaluate("[...document.querySelectorAll('input')].map(i=>i.value)"))
+        ok = (f"Nov {DAY}, 2026" in _t) and ("need to be shared between" not in _t)
+        print("date ok:", ok)
+        if CONFIRM and ok:
             pg.mouse.click(1282, 842); pg.wait_for_timeout(9000); shot(pg, "d6")
             print("scheduled; url:", pg.url)
     finally:

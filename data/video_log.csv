@@ -1,4 +1,5 @@
 video,clip_id,published,length_s,hook,kit,yt_views,yt_stayed_pct,yt_swiped_pct,yt_likes,yt_comments,yt_subs,yt_avg_view_s,fb_views,fb_3s_views,fb_avg_play_s,fb_reactions,checked_at
-zoomies,6a1a92d5,2026-11-18 08:00 Manila,19,"cat running in frame 1; LAP tags","punch+bonk+airhorn+lap tags; TangentMotionBlur WhipPan DirectionalWarp ZoomInOut",1083,28.4,71.6,4,0,1,5.3,259,61,3,0,2026-11-19 22:20 Manila (48h)
-standing_cat,6add7f04,2026-11-19 08:00 Manila,15,"cold open on pickup, no nap","circle on paw, slow push, freeze on wink; StretchSlide LensPush WhipSpin ZoomInOut",576,22.5,77.5,12,0,0,5.0,~230,80,4,0,2026-11-19 22:20 Manila (14h)
-croc_cat,689db55f,2026-11-20 08:00 Manila,13,"cat poking croc toy in frame 1; snap at 7 s","push, damage on snap, violin+vineboom; DirectionalWarp TangentMotionBlur",,,,,,,,,,,pending
+zoomies,6a1a92d5,2026-11-18 08:00 Manila,19,"cat running in frame 1; LAP tags","punch+bonk+airhorn+lap tags; TangentMotionBlur WhipPan DirectionalWarp ZoomInOut",1200,29.1,70.9,6,0,2,,263,63,3,0,2026-11-20 21:13 Manila (61h)
+standing_cat,6add7f04,2026-11-19 08:00 Manila,15,"cold open on pickup, no nap","circle on paw, slow push, freeze on wink; StretchSlide LensPush WhipSpin ZoomInOut",787,27.3,72.7,14,0,0,,244,80,4,1,2026-11-20 21:13 Manila (37h)
+croc_cat,689db55f,2026-11-20 08:00 Manila,13,"cat poking croc toy in frame 1; snap at 7 s","push, damage on snap, violin+vineboom; DirectionalWarp TangentMotionBlur",600,50.6,49.4,4,0,2,,0 (not reported yet),0,0,0,2026-11-20 21:13 Manila (13h)
+bottle_cat,68db5ecc,2026-11-21 08:00 Manila,15,"pack stuck on head + spotlight in frame 1; fall at 9 s","spot, bonk, punch on reveal; WhipPan ZoomInOut; cold grade",,,,,,,,,,,pending

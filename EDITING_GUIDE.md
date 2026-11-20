@@ -313,3 +313,15 @@ After each video, record its numbers in `data/video_log.csv` (one row per video)
 **Video 3 (croc dentist cat, 2026-11-19):** clip `689db55f`, 13.4 s. Hook per the day-2 lessons: motion in frame 1, short runtime, a clear setup and snap. Kit: slow push on the paw, damage on the snap (something really gets hurt), violin then vineboom. Transitions DirectionalWarp, TangentMotionBlur; accents green/amber. Output `output/croc_cat.mp4`, metadata `data/yt/croc_meta.json`. Waiting for the owner's yes.
 
 **Video 3 scheduled (2026-11-19):** YouTube Short "Cat Shorts: Cat vs Crocodile Dentist, He Lost" and the mochineko Reel, both Nov 20, 2026, 8:00 AM Manila (verified on screen). Gotcha: `fb_reel.py <meta> confirm <day>` needs the day as the third argument (default 19), otherwise Facebook rejects the past time; always check `data/clipsheets/fb_d5.png` shows the right date. Check its numbers at about 4 h, 24 h, 72 h.
+
+## 21. Day 3 check (2026-11-20, 21:13 Manila)
+
+Channel: 37 subs (+2), 2.5K views in 28 d, 3.7 h watch.
+- **Video 3 (croc dentist cat, 13 h): 600 views, 50.6% stayed to watch (about double the others), +2 subscribers.** Facebook shows 0 so far (Meta reports late; it is published).
+- Video 2 (standing cat, 37 h): 787 views, 27.3% stayed, 14 likes, 0 subs, 67% Philippines.
+- Video 1 (zoomies, 61 h): about 1.2K views, 29.1% stayed, +2 subs overall, geography 34% US / 31% Philippines.
+- **What worked in video 3:** motion in frame 1, short (13 s), a clear setup then a real hurt moment (snap) with the damage effect, one slow push for tension. Calm hold clips (video 2) do not retain. Keep: big readable motion, short, a payoff before 8 s.
+
+**Video 4 (bottle-pack cat, 2026-11-20):** clip `68db5ecc` (357.8K likes, 15 s). Rejected: parkour cat (AI-looking, morphing limbs, burned label) and a compilation of different cats. Hook: spotlight on the stuck head in frame 1. Kit: spot, bonk on the fall, punch on the innocent stare, cold grade, WhipPan/ZoomInOut; accents amber/magenta/cyan. Output `output/bottle_cat.mp4`, metadata `data/yt/bottle_meta.json`. New clips fetched with `rednote_fetch.py "猫猫 翻车 搞笑" 8` (action-focused search works). Waiting for the owner's yes.
+
+**Video 4 scheduled (2026-11-20):** YouTube Short "Cat Stuck in a Bottle Pack, Zero Plan" and the mochineko Reel, both Nov 21, 2026, 8:00 AM Manila (verified on screen). `fb_reel.py` now has a date guard: it only presses Schedule when the form shows the right day (reads the input values, since the date is not in the page text) and prints `date ok: True/False`. Check numbers at about 4 h, 24 h, 72 h.
