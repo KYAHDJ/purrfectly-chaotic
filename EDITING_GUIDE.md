@@ -347,3 +347,13 @@ Channel: 39 subs (+2), 4K views in 28 d, 6.2 h watch.
 5. **Pin:** the owner wants every channel comment pinned, but YouTube blocks pinning until a one-time phone verification ("Get advanced features") is done in YouTube Studio. The owner has to do that part. After that, `comment.py <id> "<text>" confirm pin` pins it.
 6. **Questions posted so far:** zoomies "what time does YOUR cat start the 3 AM zoomies", standing cat "does your cat put up with being held", croc "which toy has your cat been too confident against", bottle cat "weirdest thing stuck on its head". Cone cat's question goes up after it publishes Nov 22: "Cone of shame survivors, how long did your cat take to figure out how to eat?"
 7. **Never** open `facebook.com/profile.php` (the owner's personal profile). Facebook work only through Meta Business Suite.
+
+## 24. Growth principles and monetization (2026-11-21)
+
+**Owner's standing rules:** post to the mochineko Facebook Page only (not the personal profile). Every video must be improved from what the data shows works, even from a small tweak, focusing on effectiveness, not repeating the same upload. Always follow what works online and re-check it.
+
+**Monetization (YouTube Partner Program), official page:** 1,000 subscribers plus either 4,000 qualified public watch hours in 12 months or 10 million qualified public Shorts views in 90 days. Shorts-feed watch time does not count toward the 4,000 hours. YouTube announced Partner Program updates from February 1, 2027 (terms to accept by January 31, 2027); press reports say new applicants will need double (8,000 hours or 20 million Shorts views), but the official page does not say so, so re-check it. Status at 2026-11-21: 39 subs, about 4K views in 28 days. Subscribers are the first gate.
+
+**What works for Shorts (practitioner consensus, not official):** the early swipe-away rate decides distribution (Studio's "viewed vs swiped away"); show motion in frame 1 and the topic or payoff immediately; no slow setup or dead air; payoff within about 10 s; faceless voice-over videos must carry the hook in the first frame and first word; avoid stock openers ("Did you know..."); share rate and intentional loops help. Our own data agrees: croc dentist (action from frame 1, snap by 7 s) 56.4% stayed; calm holds 23-29%.
+
+**Per-video improvement loop:** before each video read `data/video_log.csv`, change one thing on purpose, record it, and compare after 24-72 h. Ideas queue: stronger first-second hook (action or a punchy first word), a loop-friendly ending, a share-worthy line, relatable pinned question, and cross-checking US vs Philippines audience.
