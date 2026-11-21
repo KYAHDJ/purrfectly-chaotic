@@ -325,3 +325,25 @@ Channel: 37 subs (+2), 2.5K views in 28 d, 3.7 h watch.
 **Video 4 (bottle-pack cat, 2026-11-20):** clip `68db5ecc` (357.8K likes, 15 s). Rejected: parkour cat (AI-looking, morphing limbs, burned label) and a compilation of different cats. Hook: spotlight on the stuck head in frame 1. Kit: spot, bonk on the fall, punch on the innocent stare, cold grade, WhipPan/ZoomInOut; accents amber/magenta/cyan. Output `output/bottle_cat.mp4`, metadata `data/yt/bottle_meta.json`. New clips fetched with `rednote_fetch.py "猫猫 翻车 搞笑" 8` (action-focused search works). Waiting for the owner's yes.
 
 **Video 4 scheduled (2026-11-20):** YouTube Short "Cat Stuck in a Bottle Pack, Zero Plan" and the mochineko Reel, both Nov 21, 2026, 8:00 AM Manila (verified on screen). `fb_reel.py` now has a date guard: it only presses Schedule when the form shows the right day (reads the input values, since the date is not in the page text) and prints `date ok: True/False`. Check numbers at about 4 h, 24 h, 72 h.
+
+## 22. Day 4 check (2026-11-21, 22:38 Manila)
+
+Channel: 39 subs (+2), 4K views in 28 d, 6.2 h watch.
+- Croc dentist (38 h): 1,419 views, **56.4% stayed, +5 subs**, 12 likes, 49% Philippines.
+- Bottle-pack cat (14 h): 782 views, 36.8% stayed, +2 subs, 11 likes. Better than videos 1-2 (28.4% and 22.5%) but well below the croc.
+- Standing cat (62 h): 927 views, 29.2% stayed, 19 likes, 0 subs, 51% Philippines, 3% US.
+- **Lesson:** retention follows when the action starts. Croc had action from frame 1 and a snap by 7 s. The bottle cat stood still for 9 s (even with a spotlight and sped up). Pick clips where something is happening continuously, not a long hold, and put the payoff before 8 s.
+- **Facebook:** the croc and bottle reels show 0 views everywhere in Meta Business Suite after 14-38 h, while reels 1-2 got about 250 each. Cause unknown (reporting lag or low distribution). Do not conclude anything about Facebook until it reports.
+- **Browser gotcha:** never guess Facebook URLs; `facebook.com/profile.php` is the owner's PERSONAL profile. Only use Meta Business Suite (business.facebook.com/latest) for the mochineko Page.
+
+**Video 5 (cone cat, 2026-11-21):** clip `6aa15f7c` (cone of shame, paw-scooping milk), 11.6 s, `CTA=none`. Test variable (change ONE thing): the call to action is a narrated question at about 8.5 s ("Would you help her, or keep filming? Comment below.") instead of subscribe pills at the end. Compare comments and subscribers with video 3 (+5 subs) and video 4 (+2). Lessons applied: action every second, no long hold, script lengths matched to clip beats (a first draft at 0.55x slow-mo was rewritten shorter). The magnifier was tried on the paw and removed (it showed a dark empty ring): use it only on a clearly small, still detail. Output `output/cone_cat.mp4`, metadata `data/yt/cone_meta.json`. Waiting for the owner's yes.
+
+## 23. New standing rules (2026-11-21)
+
+1. **Video 5 scheduled:** "Cone of Shame vs a Bowl of Milk" on YouTube and the mochineko Reel, Nov 22, 2026, 8:00 AM Manila (verified on screen).
+2. **Delete local copies after scheduling:** once a video is scheduled on both platforms, delete its rendered mp4 (and preview/thumb) from `output/` and its used source clip from `clips/` (its id stays in `clips/manifest.json` so it is not fetched again). Keep plans, metadata and the log. Delete by explicit file names; wildcard removals of the `_tmp*` folders are blocked by Claude Code's safety check, so those temp folders (about 100 MB) have to be cleared by the owner.
+3. **Dashboard always shows Facebook stats too** (views, 3-second views, avg play, reactions from Meta Business Suite) next to YouTube. Facebook reels 3-5 have shown 0 so far; say so plainly.
+4. **Comments:** every video gets one top-level comment from the channel with a relatable question (different per video), posted with `data/yt/comment.py <videoId> "<text>" confirm` once the video is public (a scheduled video cannot be commented on until it publishes). Reply to viewer comments in the Studio Comments tab on every "daily"/"again" check.
+5. **Pin:** the owner wants every channel comment pinned, but YouTube blocks pinning until a one-time phone verification ("Get advanced features") is done in YouTube Studio. The owner has to do that part. After that, `comment.py <id> "<text>" confirm pin` pins it.
+6. **Questions posted so far:** zoomies "what time does YOUR cat start the 3 AM zoomies", standing cat "does your cat put up with being held", croc "which toy has your cat been too confident against", bottle cat "weirdest thing stuck on its head". Cone cat's question goes up after it publishes Nov 22: "Cone of shame survivors, how long did your cat take to figure out how to eat?"
+7. **Never** open `facebook.com/profile.php` (the owner's personal profile). Facebook work only through Meta Business Suite.

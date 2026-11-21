@@ -1,0 +1,90 @@
+{
+ "id": "68db5ecc0000000004004af0",
+ "file": "rn_68db5ecc0000000004004af0.mp4",
+ "dur": 15.0,
+ "w": 720,
+ "h": 1280,
+ "angle": "water pack stuck on head, calm denial, faceplant, innocent stare",
+ "rhythm": false,
+ "peaks": [],
+ "cen": [],
+ "lines": [
+  {
+   "say": "Bro has a bottle pack stuck on his head. And he is calm about it.",
+   "at": 0.2,
+   "pause": 0
+  },
+  {
+   "say": "Step one, stand still. Step two, think about your choices.",
+   "at": 3.2,
+   "pause": 0
+  },
+  {
+   "say": "Step three, no plan. Just vibes.",
+   "at": 6.5,
+   "pause": 0
+  },
+  {
+   "say": "Then gravity joined the chat.",
+   "at": 9.2,
+   "pause": 0
+  },
+  {
+   "say": "Pack is gone. Face says, I have never seen that thing in my life.",
+   "at": 11.0,
+   "pause": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "spot",
+   "t": 0.2,
+   "focus": [
+    0.28,
+    0.38
+   ],
+   "r": 210,
+   "dur": 2.4
+  },
+  {
+   "type": "sfx",
+   "name": "bonk",
+   "t": 9.8,
+   "g": 0.6
+  },
+  {
+   "type": "punch",
+   "t": 12.0,
+   "focus": [
+    0.45,
+    0.3
+   ],
+   "zoom": 1.4,
+   "dur": 0.9
+  }
+ ],
+ "trs": [
+  "WhipPan",
+  "ZoomInOut",
+  "StretchSlide",
+  "LensPush"
+ ],
+ "sw": [
+  1,
+  5,
+  7,
+  4,
+  12,
+  10,
+  6,
+  11
+ ],
+ "acc": [
+  "FFAA00",
+  "FF66FF",
+  "00FFFF"
+ ],
+ "grade": "cold",
+ "music": 0.15,
+ "cta_text": "Hit subscribe for more, and tell me in the comments what this cat should get stuck on next."
+}

@@ -1,90 +1,85 @@
 {
- "id": "68db5ecc0000000004004af0",
- "file": "rn_68db5ecc0000000004004af0.mp4",
- "dur": 15.0,
+ "id": "6aa15f7c000000001203c281",
+ "file": "rn_6aa15f7c000000001203c281.mp4",
+ "dur": 11.0,
  "w": 720,
  "h": 1280,
- "angle": "water pack stuck on head, calm denial, faceplant, innocent stare",
+ "angle": "cone of shame vs milk, she uses her paw like a spoon",
  "rhythm": false,
  "peaks": [],
  "cen": [],
  "lines": [
   {
-   "say": "Bro has a bottle pack stuck on his head. And he is calm about it.",
-   "at": 0.2,
+   "say": "Cone of shame versus milk. The cone lost.",
+   "at": 0.1,
    "pause": 0
   },
   {
-   "say": "Step one, stand still. Step two, think about your choices.",
-   "at": 3.2,
+   "say": "Plot twist, she has hands. Dip, lick, repeat.",
+   "at": 2.0,
    "pause": 0
   },
   {
-   "say": "Step three, no plan. Just vibes.",
-   "at": 6.5,
+   "say": "Now she stares like I put the cone on.",
+   "at": 4.0,
    "pause": 0
   },
   {
-   "say": "Then gravity joined the chat.",
-   "at": 9.2,
+   "say": "Back to work. Zero shame, maximum milk, no regrets.",
+   "at": 5.8,
    "pause": 0
   },
   {
-   "say": "Pack is gone. Face says, I have never seen that thing in my life.",
-   "at": 11.0,
+   "say": "Would you help her, or keep filming? Comment below.",
+   "at": 8.5,
    "pause": 0
   }
  ],
  "events": [
   {
-   "type": "spot",
-   "t": 0.2,
-   "focus": [
-    0.28,
-    0.38
-   ],
-   "r": 210,
-   "dur": 2.4
+   "type": "sfx",
+   "name": "bonk",
+   "t": 0.9,
+   "g": 0.5
   },
   {
    "type": "sfx",
-   "name": "bonk",
-   "t": 9.8,
-   "g": 0.6
+   "name": "ding",
+   "t": 2.9,
+   "g": 0.4
   },
   {
    "type": "punch",
-   "t": 12.0,
+   "t": 4.1,
    "focus": [
     0.45,
-    0.3
+    0.35
    ],
-   "zoom": 1.4,
-   "dur": 0.9
+   "zoom": 1.35,
+   "dur": 1.0
   }
  ],
  "trs": [
-  "WhipPan",
-  "ZoomInOut",
   "StretchSlide",
-  "LensPush"
+  "TangentMotionBlur",
+  "ZoomInOut",
+  "WhipSpin"
  ],
  "sw": [
+  6,
+  12,
   1,
   5,
-  7,
+  11,
   4,
-  12,
   10,
-  6,
-  11
+  7
  ],
  "acc": [
-  "FFAA00",
-  "FF66FF",
-  "00FFFF"
+  "FF99FF",
+  "00FFFF",
+  "FFD700"
  ],
- "grade": "cold",
- "music": 0.15,
- "cta_text": "Hit subscribe for more, and tell me in the comments what this cat should get stuck on next."
+ "grade": "warm",
+ "music": 0.15
 }
