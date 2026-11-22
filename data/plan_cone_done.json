@@ -1,0 +1,85 @@
+{
+ "id": "6aa15f7c000000001203c281",
+ "file": "rn_6aa15f7c000000001203c281.mp4",
+ "dur": 11.0,
+ "w": 720,
+ "h": 1280,
+ "angle": "cone of shame vs milk, she uses her paw like a spoon",
+ "rhythm": false,
+ "peaks": [],
+ "cen": [],
+ "lines": [
+  {
+   "say": "Cone of shame versus milk. The cone lost.",
+   "at": 0.1,
+   "pause": 0
+  },
+  {
+   "say": "Plot twist, she has hands. Dip, lick, repeat.",
+   "at": 2.0,
+   "pause": 0
+  },
+  {
+   "say": "Now she stares like I put the cone on.",
+   "at": 4.0,
+   "pause": 0
+  },
+  {
+   "say": "Back to work. Zero shame, maximum milk, no regrets.",
+   "at": 5.8,
+   "pause": 0
+  },
+  {
+   "say": "Would you help her, or keep filming? Comment below.",
+   "at": 8.5,
+   "pause": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "sfx",
+   "name": "bonk",
+   "t": 0.9,
+   "g": 0.5
+  },
+  {
+   "type": "sfx",
+   "name": "ding",
+   "t": 2.9,
+   "g": 0.4
+  },
+  {
+   "type": "punch",
+   "t": 4.1,
+   "focus": [
+    0.45,
+    0.35
+   ],
+   "zoom": 1.35,
+   "dur": 1.0
+  }
+ ],
+ "trs": [
+  "StretchSlide",
+  "TangentMotionBlur",
+  "ZoomInOut",
+  "WhipSpin"
+ ],
+ "sw": [
+  6,
+  12,
+  1,
+  5,
+  11,
+  4,
+  10,
+  7
+ ],
+ "acc": [
+  "FF99FF",
+  "00FFFF",
+  "FFD700"
+ ],
+ "grade": "warm",
+ "music": 0.15
+}

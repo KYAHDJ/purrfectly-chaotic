@@ -1,85 +1,95 @@
 {
- "id": "6aa15f7c000000001203c281",
- "file": "rn_6aa15f7c000000001203c281.mp4",
- "dur": 11.0,
+ "id": "6877aa37000000002001b0f3",
+ "file": "rn_6877aa37000000002001b0f3.mp4",
+ "dur": 21.0,
  "w": 720,
  "h": 1280,
- "angle": "cone of shame vs milk, she uses her paw like a spoon",
+ "angle": "fat cat guards cushion from a kitten, two rounds",
  "rhythm": false,
  "peaks": [],
  "cen": [],
  "lines": [
   {
-   "say": "Cone of shame versus milk. The cone lost.",
+   "say": "This is his cushion. He has very strong feelings about that.",
    "at": 0.1,
    "pause": 0
   },
   {
-   "say": "Plot twist, she has hands. Dip, lick, repeat.",
-   "at": 2.0,
+   "say": "Kitten tries to share. Gets a paw to the face. Learns nothing. Tries again.",
+   "at": 3.0,
    "pause": 0
   },
   {
-   "say": "Now she stares like I put the cone on.",
-   "at": 4.0,
+   "say": "Ten minutes of silent tension later, the kitten is still plotting.",
+   "at": 7.0,
    "pause": 0
   },
   {
-   "say": "Back to work. Zero shame, maximum milk, no regrets.",
-   "at": 5.8,
+   "say": "Round two. Same plan. Same result. Absolute commitment to bad ideas.",
+   "at": 15.0,
    "pause": 0
   },
   {
-   "say": "Would you help her, or keep filming? Comment below.",
-   "at": 8.5,
+   "say": "Cushion owner, one. Kitten, zero. Pick a side below.",
+   "at": 19.0,
    "pause": 0
   }
  ],
  "events": [
   {
+   "type": "text",
+   "t": 0.2,
+   "until": 6.9,
+   "text": "ROUND 1",
+   "size": 64,
+   "pos": [
+    50,
+    150
+   ]
+  },
+  {
    "type": "sfx",
    "name": "bonk",
-   "t": 0.9,
+   "t": 1.9,
    "g": 0.5
   },
   {
-   "type": "sfx",
-   "name": "ding",
-   "t": 2.9,
-   "g": 0.4
+   "type": "freeze",
+   "t": 5.2,
+   "dur": 0.6
   },
   {
-   "type": "punch",
-   "t": 4.1,
-   "focus": [
-    0.45,
-    0.35
-   ],
-   "zoom": 1.35,
-   "dur": 1.0
+   "type": "text",
+   "t": 15.1,
+   "until": 18.9,
+   "text": "ROUND 2",
+   "size": 64,
+   "pos": [
+    50,
+    150
+   ]
   }
  ],
  "trs": [
-  "StretchSlide",
+  "LensPush",
+  "WhipPan",
   "TangentMotionBlur",
-  "ZoomInOut",
-  "WhipSpin"
+  "StretchSlide"
  ],
  "sw": [
-  6,
-  12,
-  1,
-  5,
   11,
   4,
+  6,
+  12,
   10,
+  1,
+  5,
   7
  ],
  "acc": [
-  "FF99FF",
-  "00FFFF",
-  "FFD700"
+  "FF8800",
+  "00FF00",
+  "00D7FF"
  ],
- "grade": "warm",
  "music": 0.15
 }
